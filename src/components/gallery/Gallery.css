@@ -1,0 +1,23 @@
+.Gallery .Image,
+.Gallery .primaryPictureWrapper {
+    border-radius: 5px;
+}
+
+.Gallery .primaryPictureWrapper {
+    height: 30rem;
+}
+
+.Gallery .thumbnail {
+    border: 6px solid #fff;
+    transition: opacity 0.2s ease-out, filter 0.2s ease-out;
+    filter: opacity(70%) grayscale(100%);
+}
+
+.Gallery .thumbnail:hover {
+    opacity: 0.7;
+}
+
+.Gallery .thumbnail.Image--selected {
+    border-color: rgba(0, 217, 255, 0.425);
+    filter: none;
+}

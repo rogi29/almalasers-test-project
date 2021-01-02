@@ -1,0 +1,19 @@
+@import '~react-lazy-load-image-component/src/effects/blur.css';
+
+.Image {
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.15);
+    background-color: #ccc;
+}
+
+.Image__img {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}

@@ -1,0 +1,7 @@
+/*
+An easy-to-use CSS grid system that is based on the grid CSS property and implemented using CSS Custom Properties.
+The following is a simple example of the usage of easy-css-grid: https://rogi29.github.io/easy-css-grid
+By Gil Nimer
+*/
+
+@import '~easy-css-grid';

@@ -1,0 +1,71 @@
+.TreeNode {
+    --first-gap: 150px;
+    --gap: 50px;
+    --level: 0;
+    --index: -1;
+    --base-degree: 135deg;
+    --degree: 20deg;
+    --baseX: 50vw;
+    --baseY: 40vh;
+    --calculated-gap: calc(var(--first-gap) + var(--gap) * var(--level));
+    --added-degree: calc(var(--degree) - var(--level) * 2deg);
+    --translateX: calc(var(--baseX) - var(--calculated-gap) + 25px);
+    --translateY: calc(var(--baseY) - var(--calculated-gap) + 25px);
+    --rotate: calc(var(--base-degree) + var(--added-degree) * var(--index));
+
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    color: #999;
+    font-weight: bold;
+    background-color: #9ad2ff;
+    box-shadow: 0 -3px 4px 1px rgba(0, 0, 0, 0.25);
+    outline: none !important;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    transform: translate(var(--translateX), var(--translateY)) rotate(var(--rotate));
+    transform-origin: var(--calculated-gap) var(--calculated-gap);
+    transition: background-color 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.TreeNode:before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    border: 3px solid #fff;
+    position: absolute;
+}
+
+.TreeNode:not(.TreeNode--expandable):hover {
+    background-color: #7bc4ff;
+}
+
+.TreeNode--expandable:not(.TreeNode--selected):hover {
+    background-color: #bbb;
+}
+
+.TreeNode--root {
+    --translateX: var(--baseX);
+    --translateY: var(--baseY);
+    --rotate: 0;
+    --calculated-gap: 0;
+    box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.TreeNode--expandable {
+    background-color: #ccc;
+    color: #777;
+}
+
+.TreeNode--selected {
+    background-color: #999;
+    color: #fff;
+}
