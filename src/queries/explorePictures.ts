@@ -1,6 +1,6 @@
 /**
  * explorePictures Query
- * Example: http://34.250.129.9/public/explorePictures?path=root
+ * Example: http://18.203.83.17/public/explorePictures?path=root
  * 
  * Response Codes:
  * - 401 unauthorized request due to an incorrect or missing X-TOKEN header
