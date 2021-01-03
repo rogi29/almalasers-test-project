@@ -2,13 +2,13 @@ import { useEffect } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
 
 import { parsePath } from 'utils/pathUtils';
-import useQuery from 'hooks/useQuery';
+import useLocationQuery from 'hooks/useLocationQuery';
 import Gallery from 'components/gallery/Gallery';
 import PageLayout from 'components/layouts/PageLayout';
 import GalleryContainer from 'components/containers/GalleryContainer';
 
 const PicturePage = () => {
-    const query = useQuery();
+    const query = useLocationQuery();
     const history = useHistory();
     const { label, parentPath } = parsePath(query.get('path'));
 
