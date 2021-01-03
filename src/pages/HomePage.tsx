@@ -8,7 +8,7 @@ const HomePage = () => {
 
     return (
         <TreeContainer
-            redirect={history.push}
+            handleClick={path => history.push(`/picture?path=${path}`)}
             children={Tree}
         />
     );

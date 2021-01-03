@@ -7,13 +7,15 @@ import { DEFAULT_PATH_PARAM, explorePictures } from 'queries/explorePictures';
 import { TreeProps } from 'components/tree/Tree';
 
 interface TreeContainerProps {
-    redirect?: (path: string) => void; 
+    handleClick?: (path: string) => void; 
     children: (props: TreeProps) => ReactElement;
 }
 
+const errorMessage = (currentPath: string) => `An error occurred while trying to retrieve information about ${currentPath}`;
+
 const TreeContainer = ({
     children,
-    redirect = () => {}
+    handleClick = () => {}
 }: TreeContainerProps) => {
     const [ selectedPaths, setSelectedPaths ] = useState<string[]>([]);
     const [ currentPath, setCurrentPath ] = useState<string | null>(null);
@@ -63,8 +65,10 @@ const TreeContainer = ({
 
     useEffect(() => {
         if (!!error) {
-            alert(error.message);
+            alert(errorMessage(currentPath || 'a folder'));
         }
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [ error ]);
 
     useEffect(() => {
@@ -109,7 +113,7 @@ const TreeContainer = ({
                             toggleFolder(path);
                             break;
                         case IMAGE_NODE_TYPE:
-                            redirect(`/picture?path=${path}`);
+                            handleClick(path);
                             break;
                     }
                 }

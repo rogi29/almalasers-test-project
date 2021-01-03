@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
 
 import { parsePath } from 'utils/pathUtils';
 import useQuery from 'hooks/useQuery';
@@ -19,7 +19,7 @@ const PicturePage = () => {
     }, [ label ]);
 
     if (parentPath === null) {
-        return <div>Path was not provided</div>;
+        return <Redirect to="/home" />;
     }
 
     return (
@@ -27,7 +27,8 @@ const PicturePage = () => {
             <GalleryContainer
                 label={label}
                 parentPath={parentPath}
-                redirect={history.push}
+                redirectOnErrorComponent={() => <Redirect to="/home" />}
+                handleClick={path => history.push(`picture?path=${path}`)}
                 children={Gallery}
             />
         </PageLayout>
