@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/almalasers-test-project/static/css/main.98f2e08f.chunk.css",
+    "main.js": "/almalasers-test-project/static/js/main.99170ebe.chunk.js",
+    "main.js.map": "/almalasers-test-project/static/js/main.99170ebe.chunk.js.map",
+    "runtime-main.js": "/almalasers-test-project/static/js/runtime-main.5adad963.js",
+    "runtime-main.js.map": "/almalasers-test-project/static/js/runtime-main.5adad963.js.map",
+    "static/css/2.ade85dd2.chunk.css": "/almalasers-test-project/static/css/2.ade85dd2.chunk.css",
+    "static/js/2.a3ee1f79.chunk.js": "/almalasers-test-project/static/js/2.a3ee1f79.chunk.js",
+    "static/js/2.a3ee1f79.chunk.js.map": "/almalasers-test-project/static/js/2.a3ee1f79.chunk.js.map",
+    "static/js/3.3f693984.chunk.js": "/almalasers-test-project/static/js/3.3f693984.chunk.js",
+    "static/js/3.3f693984.chunk.js.map": "/almalasers-test-project/static/js/3.3f693984.chunk.js.map",
+    "index.html": "/almalasers-test-project/index.html",
+    "static/css/2.ade85dd2.chunk.css.map": "/almalasers-test-project/static/css/2.ade85dd2.chunk.css.map",
+    "static/css/main.98f2e08f.chunk.css.map": "/almalasers-test-project/static/css/main.98f2e08f.chunk.css.map",
+    "static/js/2.a3ee1f79.chunk.js.LICENSE.txt": "/almalasers-test-project/static/js/2.a3ee1f79.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5adad963.js",
+    "static/css/2.ade85dd2.chunk.css",
+    "static/js/2.a3ee1f79.chunk.js",
+    "static/css/main.98f2e08f.chunk.css",
+    "static/js/main.99170ebe.chunk.js"
+  ]
+}
