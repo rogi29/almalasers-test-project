@@ -1,11 +1,12 @@
 .TreeNode {
-    --first-gap: 150px;
-    --gap: 50px;
+    --size: 50px;
+    --first-gap: calc(var(--size) * 3);
+    --gap: var(--size);
     --level: 0;
     --index: -1;
     --base-degree: 135deg;
     --degree: 20deg;
-    --baseX: 50vw;
+    --baseX: calc(50vw - var(--size) / 2);
     --baseY: 40vh;
     --calculated-gap: calc(var(--first-gap) + var(--gap) * var(--level));
     --added-degree: calc(var(--degree) - var(--level) * 2deg);
@@ -14,8 +15,8 @@
     --rotate: calc(var(--base-degree) + var(--added-degree) * var(--index));
 
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: var(--size);
+    height: var(--size);
     top: 0;
     left: 0;
     color: #999;

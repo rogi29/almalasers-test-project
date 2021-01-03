@@ -28,7 +28,7 @@ const Tree = ({
 }: TreeProps) => {
     let currIndex = -1;
     let prevLevel = 0;
-    
+
     return (
         <div className="Tree">
             <TreeNode

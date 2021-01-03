@@ -1,0 +1,24 @@
+.TransformTree__tools {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1rem;
+    bottom: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.TransformTree__tools button {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    line-height: 1rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    background: transparent;
+    border: 1px solid #ddd;
+}
