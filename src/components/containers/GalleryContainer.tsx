@@ -4,6 +4,7 @@ import { FileStructure, IMAGE_NODE_TYPE } from 'modals/FileStructure';
 import { explorePictures } from 'queries/explorePictures';
 import { buildPath } from 'utils/pathUtils';
 import { GalleryProps } from 'components/gallery/Gallery';
+import Spinner from 'components/core/Spinner';
 
 interface GalleryContainerProps {
     label: string | null;
@@ -25,7 +26,7 @@ const GalleryContainer = ({
     const pictures = data?.children.filter(({ type }) => type === IMAGE_NODE_TYPE);
 
     if (!error && !data) {
-        return <div>Loading...</div>;
+        return <Spinner />;
     }
 
     if (!!error || currFile?.type !== IMAGE_NODE_TYPE) {

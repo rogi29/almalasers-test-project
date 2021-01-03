@@ -1,3 +1,5 @@
+@import "~react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 body {
     background-color: #eee;
     margin: 0;
