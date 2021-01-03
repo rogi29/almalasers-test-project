@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { SWRConfig } from 'swr';
 import HomePage from 'pages/HomePage';
 import PicturePage from 'pages/PicturePage';
@@ -10,18 +9,24 @@ const swrConfig = {
 
 const App = () => (
     <SWRConfig value={swrConfig}>
-        <BrowserRouter>
+        {/* BrowserRouter was replaced with HashRouter to work with Github Pages */}
+        <HashRouter>
             <div className="App">
                 <Switch>
-                    <Route path="/picture">
+                    <Route
+                        exact
+                        path="/"
+                        render={() => <Redirect to="/home" />}
+                    />
+                    <Route exact path="/picture">
                         <PicturePage />
                     </Route>
-                    <Route path="/home">
+                    <Route exact path="/home">
                         <HomePage />
                     </Route>
                 </Switch>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     </SWRConfig>
 );
 
