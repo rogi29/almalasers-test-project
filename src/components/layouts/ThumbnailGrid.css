@@ -1,3 +1,24 @@
 .Grid.ThumbnailGrid > .cell > * {
     cursor: pointer;
 }
+
+.Grid.ThumbnailGrid > .cell {
+    --column-span: 5;
+}
+
+.Grid.ThumbnailGrid {
+    --rows-height: 8rem;
+}
+
+@media(min-width: 768px) {
+    .Grid.ThumbnailGrid {
+        --rows-height: 14rem;
+    }
+}
+
+@media(min-width: 1200px) {
+    .Grid.ThumbnailGrid > .cell {
+        --rows-height: 10rem;
+        --column-span: 3;
+    }
+}

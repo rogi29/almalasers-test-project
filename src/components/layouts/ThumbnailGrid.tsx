@@ -16,9 +16,8 @@ const ThumbnailGrid = ({
 }: ThumbnailGridProps) => (
     <Grid
         {...props}
-        columns={3}
-        gap="1rem"
-        rowsHeight="16rem"
+        columns={15}
+        gap="0.5rem"
         className={classnames(
             'ThumbnailGrid',
             className
